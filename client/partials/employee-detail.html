@@ -1,0 +1,25 @@
+<div class="topcoat-navigation-bar">
+    <div class="topcoat-navigation-bar__item left quarter">
+        <a class="topcoat-icon-button--quiet back-button" href="" ng-click="back()">
+            <span class="topcoat-icon topcoat-icon--back"></span>
+        </a>
+    </div>
+    <div class="topcoat-navigation-bar__item center half">
+        <h3>{{employee.firstName}}</h3>
+    </div>
+</div>
+
+<div class='details'>
+    <img ng-src="pics/{{employee.pic}}" class="employee-image">
+    <h1>{{employee.firstName}} {{employee.lastName}}</h1>
+    <h2>{{employee.title}}</h2>
+    
+    <div class="topcoat-list__container scroller">
+        <ul class="topcoat-list list actions">
+           
+            <li class="topcoat-list__item" ng-show="employee.reports"><a ng-click="go('employees/' + employee.id + '/reports')"><p>Add to cart</p><div class="action-icon icon-reports"/></a></li>
+           
+        </ul>
+    </div>
+</div>
+                
